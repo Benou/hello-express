@@ -4,9 +4,11 @@
 
 import angular from 'angular'
 import uiRouter from 'angular-ui-router'
+import ngResource from 'angular-resource'
 
 export default angular
   .module('app.core', [
-    uiRouter
+    uiRouter,
+    ngResource
   ])
   .name

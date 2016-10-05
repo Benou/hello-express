@@ -1,0 +1,28 @@
+/* GREETING */
+
+.greeting {
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: lightgray;
+
+  .greeting-id {
+    color: white;
+    margin-right: 4px;
+    padding: 3px 6px;
+    border-radius: 4px 0 0 4px;
+    background-color: black;
+  }
+
+  .greeting-name {
+    line-height: 150%;
+    text-transform: capitalize;
+  }
+}
+
+.greeting:hover {
+  background-color: lightcoral;
+
+  .greeting-name {
+    color: white;
+  }
+}

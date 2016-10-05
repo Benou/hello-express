@@ -5,29 +5,35 @@
 describe('Hello', () => {
 
   beforeEach(() => {
-    angular.mock.module('app.hello')
+    angular.mock.module('app.greeting')
   })
 
   describe('Component', () => {
 
     let scope, element
 
-    beforeEach(angular.mock.inject(($rootScope, $compile, $stateParams) => {
+    beforeEach(angular.mock.inject(($rootScope, $compile) => {
       scope = $rootScope.$new()
-      $stateParams.name = 'Benou'
-      element = angular.element('<hello></hello>')
+      element = angular.element('<greeting greeting="greeting"></greeting>')
       element = $compile(element)(scope)
       scope.$apply()
     }))
 
     it('should render Hello Benou !', function() {
-      let h2 = element.find('h2')
+      scope.greeting = {
+        id: 1,
+        name: 'benou'
+      }
+      scope.$apply()
+
+      let spans = element.find('span')
+      console.log(spans)
       expect(h2.text()).toEqual('Hello Benou !')
     })
 
   })
 
-  describe('Controller', () => {
+  /*describe('Controller', () => {
 
     let controller, defaultName
 
@@ -49,5 +55,5 @@ describe('Hello', () => {
       expect(controller.name).toEqual('Benou')
     })
   })
-
+*/
 })

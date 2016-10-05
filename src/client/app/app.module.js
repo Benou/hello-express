@@ -5,14 +5,14 @@
 import angular from 'angular'
 
 import core from './core/core.module'
-import hello from './hello/hello.module'
+import greeting from './greeting/greeting.module'
 
 import app from './components/app.component'
 
 angular
   .module('app', [
     core,
-    hello
+    greeting
   ])
   .component('app', app)
 

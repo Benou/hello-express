@@ -1,0 +1,21 @@
+/* GREETING LIST */
+
+.greeting-list {
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid lightgray;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    li:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
